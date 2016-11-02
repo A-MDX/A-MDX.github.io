@@ -1,0 +1,146 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>print</title> 
+<meta charset="utf-8" />
+<link href="/PIMS/css/content.css" rel="stylesheet" type="text/css" />
+<link href="/PIMS/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/PIMS/js/prototype.js"></script>
+<script type="text/javascript" src="/PIMS/js/page.js"></script>
+<script type="text/javascript" src="/PIMS/js/pimsutil.js"></script>
+<script type="text/javascript" src="/PIMS/js/validate.js"></script>
+<!-- 日历2 -->
+<script language="JavaScript" type="text/javascript" src="/PIMS/js/My97DatePicker/WdatePicker.js"></script>
+<script>
+//alert(screen.width);
+//alert(screen.height);
+</script>
+
+    <base href="http://my.yonyou.com:80/PIMS/">
+    
+    <meta name="decorator" content="simplehead"/> 
+  
+</head>
+<body>
+
+<table align=center width="100%" border="0">
+	<tr align=right ><td><img src="/PIMS/image/expense.bmp"></td></tr>
+</table>
+<table align=center width="100%" class="print" style="word-break:break-all;word-wrap:break-word;font-size:12px;font-weight:bold" borderColor='black' border="1" cellSpacing=0 cellPadding=0>
+<tr><td>	
+	<table width="100%" cellSpacing=0 cellPadding=0 >
+	<tr><td>
+				<table height="50px" border=1 width="100%"  class="print" >
+					<tr >
+						<td rowspan="2">受款人：马东旭(E1500)</td>
+						<td>开支公司:用友汽车信息科技（上海）股份有限公司</td>
+						<td >代码：BXD2016102855244</td>
+					</tr>
+					<tr >
+						<td >开支部门：经销商服务平台研发部</td>
+						<td >附件张数：<span id='AFFIX'></span> 张</td>
+					</tr>
+				</table>
+	</td></tr>
+	<tr><td>
+				<table border=1 width="100%" class="print" >
+					<tr height='50px' align='center'>
+						<td>项次</td>
+						<td>发生日期</td>
+						<td>项目编号</td>
+						<td>项目名称</td>
+						<td>支出类型</td>
+						<td>金额</td>
+					</tr>
+					
+			 		<tr align='center'>
+			 			<td>1</td>
+				   		<td>2016-10-27</td>
+				   		<td>660PYF16001005</td>
+						<td>2016互联营销V1.0-e代驾服务</td>
+						<td>交通费</td>
+				   		<td>207</td>
+			   		</tr>
+					 
+				</table>
+		</td></tr>
+		<tr><td>
+				<table height='50px' border=1 width="100%"  class="print" >
+					<tr align='center' >
+						<td >合计</td>
+						<td>&yen;207</td>
+					</tr>
+					<tr align='center'>
+						<td >大写</td>
+						<td>贰佰零柒元整</td>
+					</tr>
+				</table>
+		</td></tr>
+		<tr><td>
+				<table width="100%" class="print" border="1">
+					<tr align='left' valign='top'>
+						<td width="12%" >
+							领款人
+							<div style="height:50px"></div>
+							日期：
+						</td>
+						<td width="17%">
+							总裁(执行总裁)/总经理
+							<div style="height:50px"></div>
+							日期：
+						</td>
+						<td width="12%">
+							财务负责人
+							<div style="height:50px"></div>
+							日期：
+						</td>
+						<td width="14%">		
+							财务部复核人
+							<div style="height:50px"></div>
+							日期：				
+						</td>
+						<td width="14%">					
+							事业部总经理
+							<div style="height:50px"></div>
+							日期：						
+						</td>
+						<td width="17%">						
+							部门负责人/项目总监
+							<div style="height:50px"><!-- 2009-2-19 add by Bill Tang start --><br>杨治国<!-- 2009-2-19 add by Bill Tang end --></div>
+							日期：					
+						</td>
+						<td width="16%">					
+							项目经理/部门主管
+							<div style="height:50px"><!-- 2009-2-19 add by Bill Tang start --><br>孙晓宇<!-- 2009-2-19 add by Bill Tang end --></div>
+							日期：						
+						</td>
+					</tr>
+				</table>
+	</td></tr>
+	</table>
+</td></tr>  
+</table>
+<script>
+window.onload=function(){
+	/** 2009-3-3 modify by Bill Tang start **/
+	document.getElementById("AFFIX").innerHTML="2";
+	/** 2009-3-3 modify by Bill Tang end **/
+  	window.print();
+}
+</script>
+	
+</body>
+</html>
+<script>   
+/*
+  document.body.onload= function(){  
+	  if(window.name!="test"){   
+	  	window.name = "test";   
+	  	location.reload();   
+	  }   
+  }     
+ */
+ </script>
