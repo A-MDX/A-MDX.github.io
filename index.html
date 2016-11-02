@@ -1,740 +1,1030 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
-  font-family: octicons-anchor;
-  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    width: 980px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-body .markdown-body {
-    padding: 45px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    word-wrap: break-word;
-}
-
-pre {
-    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
-.markdown-body {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #333;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-.markdown-body a {
-  background-color: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline: 0;
-}
-
-.markdown-body strong {
-  font-weight: bold;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-.markdown-body img {
-  border: 0;
-}
-
-.markdown-body hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-.markdown-body pre {
-  overflow: auto;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-.markdown-body input {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body html input[disabled] {
-  cursor: default;
-}
-
-.markdown-body input {
-  line-height: normal;
-}
-
-.markdown-body input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body input {
-  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.markdown-body a {
-  color: #4078c0;
-  text-decoration: none;
-}
-
-.markdown-body a:hover,
-.markdown-body a:active {
-  text-decoration: underline;
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.markdown-body hr:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body hr:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown-body h1 {
-  font-size: 30px;
-}
-
-.markdown-body h2 {
-  font-size: 21px;
-}
-
-.markdown-body h3 {
-  font-size: 16px;
-}
-
-.markdown-body h4 {
-  font-size: 14px;
-}
-
-.markdown-body h5 {
-  font-size: 12px;
-}
-
-.markdown-body h6 {
-  font-size: 11px;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body dd {
-  margin-left: 0;
-}
-
-.markdown-body code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
-.markdown-body .select::-ms-expand {
-  opacity: 0;
-}
-
-.markdown-body .octicon {
-  font: normal normal normal 16px/1 octicons-anchor;
-  display: inline-block;
-  text-decoration: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.markdown-body .octicon-link:before {
-  content: '\f05c';
-}
-
-.markdown-body:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.markdown-body>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-.markdown-body .anchor {
-  display: inline-block;
-  padding-right: 2px;
-  margin-left: -18px;
-}
-
-.markdown-body .anchor:focus {
-  outline: none;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 1em;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
-  color: #000;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
-  text-decoration: none;
-}
-
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
-  visibility: visible;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h1 .anchor {
-  line-height: 1;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown-body h2 .anchor {
-  line-height: 1;
-}
-
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown-body h3 .anchor {
-  line-height: 1.2;
-}
-
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-
-.markdown-body h4 .anchor {
-  line-height: 1.2;
-}
-
-.markdown-body h5 {
-  font-size: 1em;
-}
-
-.markdown-body h5 .anchor {
-  line-height: 1.1;
-}
-
-.markdown-body h6 {
-  font-size: 1em;
-  color: #777;
-}
-
-.markdown-body h6 .anchor {
-  line-height: 1.1;
-}
-
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body li>p {
-  margin-top: 16px;
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.markdown-body blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-
-.markdown-body table th {
-  font-weight: bold;
-}
-
-.markdown-body table th,
-.markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-
-.markdown-body img {
-  max-width: 100%;
-  box-sizing: content-box;
-  background-color: #fff;
-}
-
-.markdown-body code {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
-  border-radius: 3px;
-}
-
-.markdown-body code:before,
-.markdown-body code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-
-.markdown-body pre code:before,
-.markdown-body pre code:after {
-  content: normal;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
-
-.markdown-body .pl-c {
-  color: #969896;
-}
-
-.markdown-body .pl-c1,
-.markdown-body .pl-s .pl-v {
-  color: #0086b3;
-}
-
-.markdown-body .pl-e,
-.markdown-body .pl-en {
-  color: #795da3;
-}
-
-.markdown-body .pl-s .pl-s1,
-.markdown-body .pl-smi {
-  color: #333;
-}
-
-.markdown-body .pl-ent {
-  color: #63a35c;
-}
-
-.markdown-body .pl-k {
-  color: #a71d5d;
-}
-
-.markdown-body .pl-pds,
-.markdown-body .pl-s,
-.markdown-body .pl-s .pl-pse .pl-s1,
-.markdown-body .pl-sr,
-.markdown-body .pl-sr .pl-cce,
-.markdown-body .pl-sr .pl-sra,
-.markdown-body .pl-sr .pl-sre {
-  color: #183691;
-}
-
-.markdown-body .pl-v {
-  color: #ed6a43;
-}
-
-.markdown-body .pl-id {
-  color: #b52a1d;
-}
-
-.markdown-body .pl-ii {
-  background-color: #b52a1d;
-  color: #f8f8f8;
-}
-
-.markdown-body .pl-sr .pl-cce {
-  color: #63a35c;
-  font-weight: bold;
-}
-
-.markdown-body .pl-ml {
-  color: #693a17;
-}
-
-.markdown-body .pl-mh,
-.markdown-body .pl-mh .pl-en,
-.markdown-body .pl-ms {
-  color: #1d3e81;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mq {
-  color: #008080;
-}
-
-.markdown-body .pl-mi {
-  color: #333;
-  font-style: italic;
-}
-
-.markdown-body .pl-mb {
-  color: #333;
-  font-weight: bold;
-}
-
-.markdown-body .pl-md {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.markdown-body .pl-mi1 {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.markdown-body .pl-mdr {
-  color: #795da3;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mo {
-  color: #1d3e81;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
-
-.markdown-body .plan-price-unit {
-  color: #767676;
-  font-weight: normal;
-}
-
-.markdown-body .task-list-item {
-  list-style-type: none;
-}
-
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
-}
-
-.markdown-body .task-list-item input {
-  margin: 0 0.35em 0.25em -1.6em;
-  vertical-align: middle;
-}
-
-.markdown-body .plan-choice {
-  padding: 15px;
-  padding-left: 40px;
-  display: block;
-  border: 1px solid #e0e0e0;
-  position: relative;
-  font-weight: normal;
-  background-color: #fafafa;
-}
-
-.markdown-body .plan-choice.open {
-  background-color: #fff;
-}
-
-.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
-  display: block;
-}
-
-.markdown-body .plan-choice-free {
-  border-radius: 3px 3px 0 0;
-}
-
-.markdown-body .plan-choice-paid {
-  border-radius: 0 0 3px 3px;
-  border-top: 0;
-  margin-bottom: 20px;
-}
-
-.markdown-body .plan-choice-radio {
-  position: absolute;
-  left: 15px;
-  top: 18px;
-}
-
-.markdown-body .plan-choice-exp {
-  color: #999;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.markdown-body .plan-choice-seat-breakdown {
-  margin-top: 10px;
-  display: none;
-}
-
-.markdown-body :checked+.radio-label {
-  z-index: 1;
-  position: relative;
-  border-color: #4078c0;
-}
-</style><title>theStory</title></head><body><article class="markdown-body"><h2>
-<a id="user-content-我是一个对象需要一个引用" class="anchor" href="#%E6%88%91%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E9%9C%80%E8%A6%81%E4%B8%80%E4%B8%AA%E5%BC%95%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>我是一个对象，需要一个引用。</h2>
-
-<p>做为一名生活在面向对象世界里的一名对象，从我诞生就不知道自己为何产生，为何存在于这个机械洪流中、</p>
-
-<div class="highlight highlight-source-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Hello</span>{
-    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-smi">String</span>... <span class="pl-v">args</span>){
-        <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Hello,world!<span class="pl-pds">"</span></span>)
-    }
-}</pre></div>
-
-<ul>
-<li>你好</li>
-<li>我是</li>
-<li>谁呀</li>
-</ul>
-</article></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Newspaper</title>
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	 <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	
+	<!-- jQuery and Modernizr-->
+	<script src="js/jquery-2.1.1.js"></script>
+	
+	<!-- Core JavaScript Files -->  	 
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header>
+	<!--Top-->
+	<nav id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<strong>Welcome to Us!</strong>
+				</div>
+				<div class="col-md-6">
+					<ul class="list-inline top-link link">
+						<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="contact.html"><i class="fa fa-comments"></i> Contact</a></li>
+						<li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<!--Navigation-->
+    <nav id="menu" class="navbar container">
+		<div class="navbar-header">
+			<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+			<a class="navbar-brand" href="#">
+				<div class="logo"><span>Newspaper</span></div>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <i class="fa fa-arrow-circle-o-down"></i></a>
+					<div class="dropdown-menu">
+						<div class="dropdown-inner">
+							<ul class="list-unstyled">
+								<li><a href="archive.html">Login</a></li>
+								<li><a href="archive.html">Register</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Video <i class="fa fa-arrow-circle-o-down"></i></a>
+					<div class="dropdown-menu">
+						<div class="dropdown-inner">
+							<ul class="list-unstyled">
+								<li><a href="archive.html">Text 201</a></li>
+								<li><a href="archive.html">Text 202</a></li>
+								<li><a href="archive.html">Text 203</a></li>
+								<li><a href="archive.html">Text 204</a></li>
+								<li><a href="archive.html">Text 205</a></li>
+							</ul>
+						</div> 
+					</div>
+				</li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <i class="fa fa-arrow-circle-o-down"></i></a>
+					<div class="dropdown-menu" style="margin-left: -203.625px;">
+						<div class="dropdown-inner">
+							<ul class="list-unstyled">
+								<li><a href="archive.html">Text 301</a></li>
+								<li><a href="archive.html">Text 302</a></li>
+								<li><a href="archive.html">Text 303</a></li>
+								<li><a href="archive.html">Text 304</a></li>
+								<li><a href="archive.html">Text 305</a></li>
+							</ul>
+							<ul class="list-unstyled">
+								<li><a href="archive.html">Text 306</a></li>
+								<li><a href="archive.html">Text 307</a></li>
+								<li><a href="archive.html">Text 308</a></li>
+								<li><a href="archive.html">Text 309</a></li>
+								<li><a href="archive.html">Text 310</a></li>
+							</ul>
+							<ul class="list-unstyled">
+								<li><a href="archive.html">Text 311</a></li>
+								<li><a href="archive.html">Text 312</a></li>
+								<li><a href="archive.html#">Text 313</a></li>
+								<li><a href="archive.html#">Text 314</a></li>
+								<li><a href="archive.html">Text 315</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="archive.html"><i class="fa fa-cubes"></i> Blocks</a></li>
+				<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+			</ul>
+			<ul class="list-inline navbar-right top-social">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>	
+	<div class="featured container">
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- Carousel -->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/1.jpg" alt="First slide">
+							<!-- Static Header -->
+							<div class="header-text hidden-xs">
+								<div class="col-md-12 text-center">
+									<h2>Aenean feugiat in ante et </h2>
+									<br>
+									<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<br>
+								</div>
+							</div><!-- /header-text -->
+						</div>
+						<div class="item">
+							<img src="images/2.jpg" alt="Second slide">
+							<!-- Static Header -->
+							<div class="header-text hidden-xs">
+								<div class="col-md-12 text-center">
+									<h2>Aenean feugiat in ante et blandit. Vestibulum</h2>
+									<br>
+									<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<br>
+								</div>
+							</div><!-- /header-text -->
+						</div>
+						<div class="item">
+							<img src="images/3.jpg" alt="Third slide">
+							<!-- Static Header -->
+							<div class="header-text hidden-xs">
+								<div class="col-md-12 text-center">
+									<h2>Curabitur tincidunt porta lorem vitae</h2>
+									<br>
+									<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+									<br>
+								</div>
+							</div><!-- /header-text -->
+						</div>
+					</div>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div><!-- /carousel -->
+			</div>
+			<div class="col-sm-4" >
+				<div id="owl-demo-1" class="owl-carousel">
+					<img src="images/slide-2.jpg" />
+					<img src="images/slide-1.jpg" />
+					<img src="images/slide-3.jpg" />
+				</div>
+				<img src="images/banner.jpg" />
+			</div>
+		</div>
+	</div>
+	
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="index-page container">
+		<div class="row">
+			<div id="main-content"><!-- background not working -->
+				<div class="col-md-6">
+					<div class="box wrap-vid">
+						<div class="zoom-container">
+							<div class="zoom-caption">
+								<span class="youtube">Youtube</span>
+								<a href="single.html">
+									<i class="fa fa-play icon-play" style="color: #fff"></i>
+								</a>
+								<p>Video's Name</p>
+							</div>
+							<img src="images/4.jpg" />
+						</div>
+						<h3 class="vid-name"><a href="#">Video's Name</a></h3>
+						<div class="info">
+							<h5>By <a href="#">Kelvin</a></h5>
+							<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+							<span><i class="fa fa-heart"></i>1,200</span>
+						</div>
+						<p class="more">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non.ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan</p>
+					</div>
+					<div class="box">
+						<div class="box-header header-vimeo">
+							<h2>Vimeo</h2>
+						</div>
+						<div class="box-content">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/2.jpg" />
+										</div>
+										<h3 class="vid-name"><a href="#">Video's Name</a></h3>
+										<div class="info">
+											<h5>By <a href="#">Kelvin</a></h5>
+											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-heart"></i>1,200</span>
+										</div>
+									</div>
+									<p class="more">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</p>
+								</div>
+								<div class="col-md-6">
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/1.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/2.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/3.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/1.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="box-header header-photo">
+							<h2>Photos</h2>
+						</div>
+						<div class="box-content">
+							<div id="owl-demo-2" class="owl-carousel">
+								<div class="item">
+									<img src="images/1.jpg" />
+									<img src="images/2.jpg" />
+								</div>
+								<div class="item">
+									<img src="images/3.jpg" />
+									<img src="images/5.jpg" />
+								</div>
+								<div class="item">
+									<img src="images/8.jpg" />
+									<img src="images/9.jpg" />
+								</div>
+								<div class="item">
+									<img src="images/10.jpg" />
+									<img src="images/11.jpg" />
+								</div>
+								<div class="item">
+									<img src="images/12.jpg" />
+									<img src="images/13.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box">
+						<div class="box-header header-natural">
+							<h2>Natural</h2>
+						</div>
+						<div class="box-content">
+							<div class="row">
+								<div class="col-md-6">
+									<img src="images/6.jpg" />
+									<h3><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
+									<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2015 / <i class="fa fa-comment-o"> / </i> 10 <i class="fa fa-eye"></i> 945</span>
+									<span class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half"></i>
+									</span>
+									<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below…...</p>
+								</div>
+								<div class="col-md-6">
+									<img src="images/7.jpg" />
+									<h3><a href="#">Your Tread Must be Light and Sure as Though Your Path...</a></h3>
+									<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2015 / <i class="fa fa-comment-o"> / </i> 3 <i class="fa fa-eye"></i> 1007</span>
+									<span class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half"></i>
+									</span>
+									<p>There once was a story about a man who could turn invisible. I thought it was only a story… until it happened to me. Ok, so here’s how it works: there’s this stuff called...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div class="col-md-3">
+					<!---- Start Widget ---->
+					<div class="widget wid-vid">
+						<div class="heading">
+							<h4>Videos</h4>
+						</div>
+						<div class="content">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#most">Most Plays</a></li>
+								<li><a data-toggle="tab" href="#popular">Popular</a></li>
+								<li><a data-toggle="tab" href="#random">Random</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="most" class="tab-pane fade in active">
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="youtube">Youtube</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="youtube">Youtube</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="popular" class="tab-pane fade">
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="youtube">Youtube</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="youtube">Youtube</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="random" class="tab-pane fade">
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="post wrap-vid">
+										<div class="zoom-container">
+											<div class="zoom-caption">
+												<span class="vimeo">Vimeo</span>
+												<a href="single.html">
+													<i class="fa fa-play-circle-o fa-3x" style="color: #fff"></i>
+												</a>
+												<p>Video's Name</p>
+											</div>
+											<img src="images/4.jpg" />
+										</div>
+										<div class="wrapper">
+											<h5 class="vid-name"><a href="#">Video's Name</a></h5>
+											<div class="info">
+												<h6>By <a href="#">Kelvin</a></h6>
+												<span><i class="fa fa-heart"></i>1,200 / <i class="fa fa-calendar"></i>25/3/2015</span>
+												<span class="rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-half"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-gallery">
+						<div class="heading"><h4>Gallery</h4></div>
+						<div class="content">
+							<div class="col-md-4">
+								<div class="row">
+									<a href="#"><img src="images/14.jpg" /></a>
+									<a href="#"><img src="images/15.jpg" /></a>
+									<a href="#"><img src="images/20.jpg" /></a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="row">
+									<a href="#"><img src="images/16.jpg" /></a>
+									<a href="#"><img src="images/17.jpg" /></a>
+									<a href="#"><img src="images/21.jpg" /></a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="row">
+									<a href="#"><img src="images/18.jpg" /></a>
+									<a href="#"><img src="images/19.jpg" /></a>
+									<a href="#"><img src="images/14.jpg" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-new-post">
+						<div class="heading"><h4>New Posts</h4></div>
+						<div class="content">
+							<h6>Lorem Ipsum is simply dummy</h6>
+							<img src="images/22.jpg" />
+							<ul class="list-inline">
+								<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+								<li><i class="fa fa-comments"></i>1,200</li>
+							</ul>
+							<p>Title should not overflow the content area A few things to check for: Non-breaking text in the...</p>
+							<h6>Lorem Ipsum is simply dummy</h6>
+							<img src="images/23.jpg" />
+							<ul class="list-inline">
+								<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+								<li><i class="fa fa-comments"></i>1,200</li>
+							</ul>
+							<p>Title should not overflow the content area A few things to check for: Non-breaking text in the...</p>
+							<h6>Lorem Ipsum is simply dummy</h6>
+							<img src="images/24.jpg" />
+							<ul class="list-inline">
+								<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+								<li><i class="fa fa-comments"></i>1,200</li>
+							</ul>
+							<p>Title should not overflow the content area A few things to check for: Non-breaking text in the...</p>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-recent-post">
+						<div class="heading"><h4>Recent Posts</h4></div>
+						<div class="content">
+							<span>Creativity is about the journey <a href="#">your mind takes</a></span>
+							<span>About the journey <a href="#">your mind</a></span>
+							<span>The journey <a href="#">your</a></span>
+							<span>Journey is about the journey <a href="#">your mind mind</a></span>
+							<span>Creativity is about the journey <a href="#">your mind takes</a></span>
+							<span>About the journey <a href="#">your mind</a></span>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<!---- Start Widget ---->
+					<div class="widget wid-tags">
+						<div class="heading"><h4>Search</h4></div>
+						<div class="content">
+							<form role="form" class="form-horizontal" method="post" action="">
+								<input type="text" placeholder="Enter Search Keywords" value="" name="v_search" id="v_search" class="form-control">
+							</form>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-tags">
+						<div class="heading"><h4>Tags</h4></div>
+						<div class="content">
+							<a href="#">animals</a>
+							<a href="#">cooking</a>
+							<a href="#">countries</a>
+							<a href="#">home</a>
+							<a href="#">likes</a>
+							<a href="#">photo</a>
+							<a href="#">link</a>
+							<a href="#">video</a>
+							<a href="#">travel</a>
+							<a href="#">images</a>
+							<a href="#">love</a>
+							<a href="#">lists</a>
+							<a href="#">makeup</a>
+							<a href="#">media</a>
+							<a href="#">password</a>
+							<a href="#">pagination</a>
+							<a href="#">pictures</a>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-comment">
+						<div class="heading"><h4>Top Comments</h4></div>
+						<div class="content">
+							<div class="post">
+								<a href="single.html">
+									<img src="images/ava-1.jpg" class="img-circle"/>
+								</a>
+								<div class="wrapper">
+									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
+									<ul class="list-inline">
+										<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+										<li><i class="fa fa-thumbs-up"></i>1,200</li>
+									</ul>
+								</div>
+							</div>
+							<div class="post">
+								<a href="single.html">
+									<img src="images/ava-2.png" class="img-circle"/>
+								</a>
+								<div class="wrapper">
+									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
+									<ul class="list-inline">
+										<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+										<li><i class="fa fa-thumbs-up"></i>1,200</li>
+									</ul>
+								</div>
+							</div>
+							<div class="post">
+								<a href="single.html">
+									<img src="images/ava-3.jpeg" class="img-circle"/>
+								</a>
+								<div class="wrapper">
+									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
+									<ul class="list-inline">
+										<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+										<li><i class="fa fa-thumbs-up"></i>1,200</li>
+									</ul>
+								</div>
+							</div>
+							<div class="post">
+								<a href="single.html">
+									<img src="images/ava-4.jpg" class="img-circle"/>
+								</a>
+								<div class="wrapper">
+									<a href="#"><h5>Curabitur tincidunt porta lorem.</h5></a>
+									<ul class="list-inline">
+										<li><i class="fa fa-calendar"></i>25/3/2015</li> 
+										<li><i class="fa fa-thumbs-up"></i>1,200</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-banner">
+						<div class="content">
+							<img src="images/banner-2.jpg" class="img-responsive"/>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-categoty">
+						<div class="heading"><h4>Category</h4></div>
+						<div class="content">
+							<select class="col-md-12">
+								<option>Mustard</option>
+								<option>Ketchup</option>
+								<option>Relish</option>
+							</select>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-calendar">
+						<div class="heading"><h4>Calendar</h4></div>
+						<div class="content">
+							<center><form action="" role="form">        
+								<div class="">
+									<div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">                </div>
+									<input type="hidden" id="dtp_input2" value="" /><br/>
+								</div>
+							</form></center>
+						</div>
+					</div>
+					<!---- Start Widget ---->
+					<div class="widget wid-tweet">
+						<div class="heading"><h4>Tweet</h4></div>
+						<div class="content">
+							<div class="tweet-item">
+								<p><i class="fa fa-twitter"></i> TLAS - Coming Soon PSD Mockup</p>
+								<a>https://t.co/dLsNZYGVbJ</a>
+								<a>#psd</a>
+								<a>#freebie</a>
+								<a>#freebie</a>
+								<a>#dribbble</a>
+								<span>July 15th, 2015</span>
+							</div>
+							<div class="tweet-item">
+								<p><i class="fa fa-twitter"></i> Little Dude Character With Multiple Hairs</p>
+								<a>https://t.co/dLsNZYGVbJ</a>
+								<a>#freebie</a>
+								<a>#design</a>
+								<a>#illustrator</a>
+								<a>#dribbble</a>
+								<span>June 23rd, 2015</span>
+							</div>
+							<div class="tweet-item">
+								<p><i class="fa fa-twitter"></i> Newsletter Subscription Form Mockup</p>
+								<a>https://t.co/dLsNZYGVbJ</a>
+								<a>#psd</a>
+								<a>#freebie</a>
+								<a>#freebie</a>
+								<a>#dribbble</a>
+								<span>June 22nd, 2015</span>
+							</div>
+							<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft...</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-footer footer-1">
+						<div class="footer-heading"><h1><span style="color: #fff;">NEWSPAPER</span></h1></div>
+						<div class="content">
+							<p>Never missed any post published in our site. Subscribe to our daly newsletter now.</p>
+							<strong>Email address:</strong>
+							<form action="#" method="post">
+								<input type="text" name="your-name" value="" size="40" placeholder="Your Email" />
+								<input type="submit" value="SUBSCRIBE" class="btn btn-3" />
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4 col-footer footer-2">
+						<div class="footer-heading"><h4>Tags</h4></div>
+						<div class="content">
+							<a href="#">animals</a>
+							<a href="#">cooking</a>
+							<a href="#">countries</a>
+							<a href="#">city</a>
+							<a href="#">children</a>
+							<a href="#">home</a>
+							<a href="#">likes</a>
+							<a href="#">photo</a>
+							<a href="#">link</a>
+							<a href="#">law</a>
+							<a href="#">shopping</a>
+							<a href="#">skate</a>
+							<a href="#">scholl</a>
+							<a href="#">video</a>
+							<a href="#">travel</a>
+							<a href="#">images</a>
+							<a href="#">love</a>
+							<a href="#">lists</a>
+							<a href="#">makeup</a>
+							<a href="#">media</a>
+							<a href="#">password</a>
+							<a href="#">pagination</a>
+							<a href="#">wildlife</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-footer footer-3">
+						<div class="footer-heading"><h4>Link List</h4></div>
+						<div class="content">
+							<ul>
+								<li><a href="#">MOST VISITED COUNTRIES</a></li>
+								<li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
+								<li><a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a></li>
+								<li><a href="#">STARTUP COMPANY’S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy-right">
+			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+		</div>
+	</footer>
+	<!-- Footer -->
+	
+	<!-- JS -->
+	<script src="owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo-1").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+        itemsDesktop : [1199,1],
+        itemsDesktopSmall : [400,1]
+      });
+	  $("#owl-demo-2").owlCarousel({
+        autoPlay: 3000,
+        items : 3,
+        
+      });
+    });
+    </script>
+	
+	
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+</body>
+</html>
