@@ -1,41 +1,39 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
   font-family: octicons-anchor;
   src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    width: 980px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-body .markdown-body {
-    padding: 45px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    word-wrap: break-word;
-}
-
-pre {
-    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
 .markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #333;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
 }
 
 .markdown-body a {
-  background-color: transparent;
+  background: transparent;
 }
 
 .markdown-body a:active,
@@ -43,8 +41,30 @@ pre {
   outline: 0;
 }
 
+.markdown-body b,
 .markdown-body strong {
   font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
 }
 
 .markdown-body h1 {
@@ -57,6 +77,7 @@ pre {
 }
 
 .markdown-body hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -67,7 +88,8 @@ pre {
 
 .markdown-body code,
 .markdown-body kbd,
-.markdown-body pre {
+.markdown-body pre,
+.markdown-body samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -101,16 +123,81 @@ pre {
   padding: 0;
 }
 
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .markdown-body input {
-  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
 }
 
 .markdown-body a {
-  color: #4078c0;
+  color: #4183c4;
   text-decoration: none;
 }
 
 .markdown-body a:hover,
+.markdown-body a:focus,
 .markdown-body a:active {
   text-decoration: underline;
 }
@@ -124,15 +211,14 @@ pre {
   border-bottom: 1px solid #ddd;
 }
 
-.markdown-body hr:before {
+.markdown-body hr:before,
+.markdown-body hr:after {
   display: table;
-  content: "";
+  content: " ";
 }
 
 .markdown-body hr:after {
-  display: table;
   clear: both;
-  content: "";
 }
 
 .markdown-body h1,
@@ -197,7 +283,9 @@ pre {
   margin-left: 0;
 }
 
-.markdown-body code {
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
@@ -205,39 +293,21 @@ pre {
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-.markdown-body .select::-ms-expand {
-  opacity: 0;
-}
-
-.markdown-body .octicon {
-  font: normal normal normal 16px/1 octicons-anchor;
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   display: inline-block;
-  text-decoration: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.markdown-body .octicon-link:before {
-  content: '\f05c';
-}
-
-.markdown-body:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body:after {
-  display: table;
-  clear: both;
-  content: "";
 }
 
 .markdown-body>*:first-child {
@@ -248,18 +318,18 @@ pre {
   margin-bottom: 0 !important;
 }
 
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
 }
 
-.markdown-body .anchor {
-  display: inline-block;
-  padding-right: 2px;
-  margin-left: -18px;
-}
-
-.markdown-body .anchor:focus {
+.markdown-body .headeranchor-link:focus {
   outline: none;
 }
 
@@ -269,39 +339,44 @@ pre {
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
+  position: relative;
   margin-top: 1em;
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
 }
 
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
   color: #000;
   vertical-align: middle;
-  visibility: hidden;
 }
 
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
   text-decoration: none;
 }
 
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
-  visibility: visible;
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
 }
 
 .markdown-body h1 {
@@ -311,10 +386,6 @@ pre {
   border-bottom: 1px solid #eee;
 }
 
-.markdown-body h1 .anchor {
-  line-height: 1;
-}
-
 .markdown-body h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
@@ -322,42 +393,22 @@ pre {
   border-bottom: 1px solid #eee;
 }
 
-.markdown-body h2 .anchor {
-  line-height: 1;
-}
-
 .markdown-body h3 {
   font-size: 1.5em;
   line-height: 1.43;
-}
-
-.markdown-body h3 .anchor {
-  line-height: 1.2;
 }
 
 .markdown-body h4 {
   font-size: 1.25em;
 }
 
-.markdown-body h4 .anchor {
-  line-height: 1.2;
-}
-
 .markdown-body h5 {
   font-size: 1em;
-}
-
-.markdown-body h5 .anchor {
-  line-height: 1.1;
 }
 
 .markdown-body h6 {
   font-size: 1em;
   color: #777;
-}
-
-.markdown-body h6 .anchor {
-  line-height: 1.1;
 }
 
 .markdown-body p,
@@ -366,7 +417,8 @@ pre {
 .markdown-body ol,
 .markdown-body dl,
 .markdown-body table,
-.markdown-body pre {
+.markdown-body pre,
+.markdown-body .admonition {
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -456,11 +508,12 @@ pre {
 
 .markdown-body img {
   max-width: 100%;
-  box-sizing: content-box;
-  background-color: #fff;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.markdown-body code {
+.markdown-body code,
+.markdown-body samp {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -486,11 +539,11 @@ pre {
   border: 0;
 }
 
-.markdown-body .highlight {
+.markdown-body .codehilite {
   margin-bottom: 16px;
 }
 
-.markdown-body .highlight pre,
+.markdown-body .codehilite pre,
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
@@ -500,7 +553,7 @@ pre {
   border-radius: 3px;
 }
 
-.markdown-body .highlight pre {
+.markdown-body .codehilite pre {
   margin-bottom: 0;
   word-break: normal;
 }
@@ -526,136 +579,325 @@ pre {
   content: normal;
 }
 
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
 }
 
-.markdown-body .pl-c {
-  color: #969896;
-}
-
-.markdown-body .pl-c1,
-.markdown-body .pl-s .pl-v {
-  color: #0086b3;
-}
-
-.markdown-body .pl-e,
-.markdown-body .pl-en {
-  color: #795da3;
-}
-
-.markdown-body .pl-s .pl-s1,
-.markdown-body .pl-smi {
+.markdown-body .admonition table {
   color: #333;
 }
 
-.markdown-body .pl-ent {
-  color: #63a35c;
+.markdown-body .admonition p {
+  padding: 0;
 }
 
-.markdown-body .pl-k {
-  color: #a71d5d;
-}
-
-.markdown-body .pl-pds,
-.markdown-body .pl-s,
-.markdown-body .pl-s .pl-pse .pl-s1,
-.markdown-body .pl-sr,
-.markdown-body .pl-sr .pl-cce,
-.markdown-body .pl-sr .pl-sra,
-.markdown-body .pl-sr .pl-sre {
-  color: #183691;
-}
-
-.markdown-body .pl-v {
-  color: #ed6a43;
-}
-
-.markdown-body .pl-id {
-  color: #b52a1d;
-}
-
-.markdown-body .pl-ii {
-  background-color: #b52a1d;
-  color: #f8f8f8;
-}
-
-.markdown-body .pl-sr .pl-cce {
-  color: #63a35c;
+.markdown-body .admonition-title {
   font-weight: bold;
+  margin: 0;
 }
 
-.markdown-body .pl-ml {
-  color: #693a17;
-}
-
-.markdown-body .pl-mh,
-.markdown-body .pl-mh .pl-en,
-.markdown-body .pl-ms {
-  color: #1d3e81;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mq {
-  color: #008080;
-}
-
-.markdown-body .pl-mi {
+.markdown-body .admonition>.admonition-title {
   color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
   font-style: italic;
 }
 
-.markdown-body .pl-mb {
-  color: #333;
-  font-weight: bold;
-}
-
-.markdown-body .pl-md {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.markdown-body .pl-mi1 {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.markdown-body .pl-mdr {
-  color: #795da3;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mo {
-  color: #1d3e81;
-}
-
-.markdown-body kbd {
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
   display: inline-block;
-  padding: 3px 5px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.markdown-body .plan-price-unit {
-  color: #767676;
-  font-weight: normal;
+.headeranchor:before {
+  content: '\f05c';
 }
 
 .markdown-body .task-list-item {
@@ -667,128 +909,154 @@ pre {
 }
 
 .markdown-body .task-list-item input {
-  margin: 0 0.35em 0.25em -1.6em;
+  margin: 0 4px 0.25em -20px;
   vertical-align: middle;
 }
 
-.markdown-body .plan-choice {
-  padding: 15px;
-  padding-left: 40px;
-  display: block;
-  border: 1px solid #e0e0e0;
-  position: relative;
-  font-weight: normal;
-  background-color: #fafafa;
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
 }
 
-.markdown-body .plan-choice.open {
-  background-color: #fff;
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
 }
 
-.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
-  display: block;
-}
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
 
-.markdown-body .plan-choice-free {
-  border-radius: 3px 3px 0 0;
-}
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
 
-.markdown-body .plan-choice-paid {
-  border-radius: 0 0 3px 3px;
-  border-top: 0;
-  margin-bottom: 20px;
-}
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
 
-.markdown-body .plan-choice-radio {
-  position: absolute;
-  left: 15px;
-  top: 18px;
-}
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
 
-.markdown-body .plan-choice-exp {
-  color: #999;
-  font-size: 12px;
-  margin-top: 5px;
-}
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-.markdown-body .plan-choice-seat-breakdown {
-  margin-top: 10px;
-  display: none;
-}
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-.markdown-body :checked+.radio-label {
-  z-index: 1;
-  position: relative;
-  border-color: #4078c0;
-}
-</style><title>Fourth</title></head><body><article class="markdown-body"><h2>
-<a id="user-content-我的第四次计划总结" class="anchor" href="#%E6%88%91%E7%9A%84%E7%AC%AC%E5%9B%9B%E6%AC%A1%E8%AE%A1%E5%88%92%E6%80%BB%E7%BB%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>我的第四次计划总结</h2>
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
 
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Fourth</title></head><body><article class="markdown-body"><h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>我的第四次计划总结</h2>
 <blockquote>
-<p>再写之前，很后悔去年的时候没有时间好好来写我的<code>第三次</code>计划总结，今年有空了，就好好完成这份充满仪式感的报告。<br>
+<p>再写之前，很后悔去年的时候没有时间好好来写我的<code>第三次</code>计划总结，今年有空了，就好好完成这份充满仪式感的报告。<br/><br />
 这次会带一些上一份计划没有完成的东西。</p>
 </blockquote>
-
-<h2>
-<a id="user-content-历程时间线" class="anchor" href="#%E5%8E%86%E7%A8%8B%E6%97%B6%E9%97%B4%E7%BA%BF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>历程，时间线</h2>
-
-<h4>
-<a id="user-content-20156" class="anchor" href="#20156" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2015.6</h4>
-
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>历程，时间线</h2>
+<h4 id="20156"><a name="user-content-20156" href="#20156" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2015.6</h4>
 <ul>
 <li><strong>大学毕业，无比留恋的离开</strong></li>
 <li>有些遗憾，没有让我的大学生活更加精彩。</li>
 </ul>
-
-<h4>
-<a id="user-content-７" class="anchor" href="#%EF%BC%97" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>７</h4>
-
+<h4 id="7"><a name="user-content-7" href="#7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>７</h4>
 <ul>
 <li><strong>来到老家</strong></li>
 <li>见到相亲对象的那一刻，你就知道自己在介绍人眼里是个什么货色了。</li>
 <li>不想说了，闹心。</li>
 </ul>
-
-<h4>
-<a id="user-content-8" class="anchor" href="#8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8</h4>
-
+<h4 id="8"><a name="user-content-8" href="#8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8</h4>
 <ul>
 <li><strong>来到上海</strong></li>
 <li>城市套路深，我想回农村。</li>
 <li>农村路也滑，人心更复杂。</li>
 </ul>
-
-<h4>
-<a id="user-content-9" class="anchor" href="#9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>9</h4>
-
+<h4 id="9"><a name="user-content-9" href="#9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9</h4>
 <ul>
 <li><strong>电话销售</strong></li>
 <li>就是各种骚扰电话，而你就是那个骚扰别人的。</li>
 <li>屈心而抑志兮，忍尤而攘诟。</li>
 <li>我的内心是痛苦的。</li>
 </ul>
-
-<h4>
-<a id="user-content-10" class="anchor" href="#10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10</h4>
-
+<h4 id="10"><a name="user-content-10" href="#10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10</h4>
 <ul>
 <li><strong>我想进入互联网行业</strong></li>
 <li>教练，我想当产品经理！</li>
 <li>嗯？没有，不过我这里有一份程序猿要不要试试？</li>
 </ul>
-
-<h4>
-<a id="user-content-11" class="anchor" href="#11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>11</h4>
-
+<h4 id="11"><a name="user-content-11" href="#11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11</h4>
 <ul>
 <li><strong>太阳当空照，我去上学校</strong></li>
 <li>I am being a <code>java</code> programmer!</li>
 <li><code>Hello,world!</code></li>
 </ul>
-
-<h4>
-<a id="user-content-12" class="anchor" href="#12" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>12</h4>
-
+<h4 id="12"><a name="user-content-12" href="#12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>12</h4>
 <ul>
 <li><strong>学而时习之</strong></li>
 <li>简单轻松加随意，这学上的真惬意；</li>
@@ -796,10 +1064,7 @@ pre {
 <li>本身适合学这个，简直如鱼得水呀；</li>
 <li>早知当初大学里，直接转到计科系。</li>
 </ul>
-
-<h4>
-<a id="user-content-20161" class="anchor" href="#20161" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2016.1</h4>
-
+<h4 id="20161"><a name="user-content-20161" href="#20161" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2016.1</h4>
 <ul>
 <li><strong>学习难度上升</strong></li>
 <li>突然难度提高了，我也学的好累呀；</li>
@@ -807,10 +1072,7 @@ pre {
 <li>追随胡歌看琅琊，真是不错的享受；</li>
 <li>上海冬天好难受，没有暖气净受冻。</li>
 </ul>
-
-<h4>
-<a id="user-content-２" class="anchor" href="#%EF%BC%92" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>２</h4>
-
+<h4 id="2"><a name="user-content-2" href="#2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>２</h4>
 <ul>
 <li><strong>学习框架</strong></li>
 <li>开始学习新框架，这个简直坑爹呀；啥都不说上项目，目瞪口呆变魔术。</li>
@@ -818,27 +1080,18 @@ pre {
 <li>中间回家过个年，回来啥都记不住；这次过年好心酸，没有挣钱净花钱。</li>
 <li>难忘这痛苦记忆，咬牙埋头争口气；心理面默默发誓，誓不回此落魄时。</li>
 </ul>
-
-<h4>
-<a id="user-content-3" class="anchor" href="#3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3</h4>
-
+<h4 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3</h4>
 <ul>
 <li><strong>没学完，找工作</strong></li>
 <li>带着一知半解地，开始好好找工作；面试时候有点慌，毕竟懂的还太少。</li>
 <li>认真复习了一下，还是拿了三offer；选择一家大公司，开始正式工作了。</li>
 </ul>
-
-<h4>
-<a id="user-content-4" class="anchor" href="#4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4</h4>
-
+<h4 id="4"><a name="user-content-4" href="#4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4</h4>
 <ul>
 <li><strong>自学了一个月后</strong></li>
 <li>培训还是太肤浅，早知道就自学了。</li>
 </ul>
-
-<h4>
-<a id="user-content-5" class="anchor" href="#5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5</h4>
-
+<h4 id="5"><a name="user-content-5" href="#5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5</h4>
 <ul>
 <li><strong>上手新项目</strong></li>
 <li>正式上手了新项目，可这任务也太难了。</li>
@@ -848,37 +1101,25 @@ pre {
 <li>队长行云流水般在我和小伙伴面前表演个魔术，ok了，照着做吧。</li>
 <li>目瞪口呆的，好吧，硬着头皮，一点一点啃。</li>
 </ul>
-
-<h4>
-<a id="user-content-6" class="anchor" href="#6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6</h4>
-
+<h4 id="6"><a name="user-content-6" href="#6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6</h4>
 <ul>
 <li><strong>猛然间学了好多好多</strong></li>
 <li>天！这段代码还能这么写？这也行？</li>
 </ul>
-
-<h4>
-<a id="user-content-7" class="anchor" href="#7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7</h4>
-
+<h4 id="7_1"><a name="user-content-7_1" href="#7_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7</h4>
 <ul>
 <li><strong>毕业满一年了</strong></li>
 <li>这真是个尴尬的年纪，欲望太多，能力太少。想要静下心来好难。</li>
 <li>我爱上了跑步，每晚九点多，狂奔在上海体育馆里，每次四公里，跑得越来越快，再也没有人能追上我，也越来越孤独寂寞了。</li>
 <li>开玩笑，从来都是我追别人的份，哪有人能追上我的。</li>
 </ul>
-
-<h4>
-<a id="user-content-8-1" class="anchor" href="#8-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8</h4>
-
+<h4 id="8_1"><a name="user-content-8_1" href="#8_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8</h4>
 <ul>
 <li><strong>项目上线</strong></li>
 <li>折腾到深夜，项目终于上线了，人生第一个正式项目，就这么诞生了。</li>
 <li>这个月，教一个可爱的小家伙怎么变聪明，人家似乎没学会，我倒是成了左撇子，时至今日吃饭都是左手，无语。</li>
 </ul>
-
-<h4>
-<a id="user-content-9-1" class="anchor" href="#9-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>9</h4>
-
+<h4 id="9_1"><a name="user-content-9_1" href="#9_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9</h4>
 <ul>
 <li><strong>搬家</strong></li>
 <li>终于可以搬家了，回想一下当初的宿舍吧：</li>
@@ -886,57 +1127,52 @@ pre {
 <li>我这么温和的一个人，在这样的环境下，变得极端暴躁！于是，谁影响到休息了，骂！谁11点后还不安静的，骂！睡觉了，还在那呵啼啼笑的，边笑身子还震，作为他下铺简直气炸了，一顿连蹬待踹的破口大骂！做为威武雄壮的北方汉子，这点自信还是有的。当然，我不该这样的。</li>
 <li>就在这么个环境下住了近一年，除了房租便宜，以及不远处有个体育馆可以供我每晚跑步，实在忍不下去了！</li>
 </ul>
-
-<h4>
-<a id="user-content-10-1" class="anchor" href="#10-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10</h4>
-
+<h4 id="10_1"><a name="user-content-10_1" href="#10_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10</h4>
 <ul>
 <li><strong>如愿以偿的，终于搬完家了</strong></li>
 <li>房租真贵，房子太大，一个人在这空旷的房子里显得格外落寞，收拾，还要收拾房子，真一点都不想动了，好想请个钟点工啊。</li>
 <li>在没有遇到你之前，我本以为我可以享受那些孤独的。关于孤独，我以前都是享受它的，怎么现在开始逃避了。</li>
 <li>很感激四年前的自己，做了一个不起眼的计划，时不时地记笔记或想法，能够让此刻的我，聊以慰藉，没有坠入漫漫长夜的痛苦！</li>
 </ul>
+<h2 id="11_1"><a name="user-content-11_1" href="#11_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11.</h2>
+<pre><code>24岁了呢，你想对自己说些什么？
 
-<h2>
-<a id="user-content-11-1" class="anchor" href="#11-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>11.</h2>
+你会经常的感觉自己很失败吧？
 
-<p>24岁了呢，你想对自己说些什么？</p>
+确实，一个人来到陌生的城市，没有了朋友，远离了家人，来之前想想自己，学校一般，学的专业更是艰难，在学校里除了读了几本书以外，还有什么本事？我不知道你哪里来的自信，就这么兴致勃勃的来了。嗯，你在上海的表哥确实厉害，可跟你有啥关系，你好意思一直依赖人家吗？
 
-<p>你会经常的感觉自己很失败吧？</p>
+来了之后很满意吧，才面试了几次，以前的自信就再也荡然无存了吧？来之前也没想好，来了之后，还是没有想好自己准备做什么，然后呢，只能去做一些中介，电话销售，卖房子，卖保险的工作，开心吗？作为一个内向的人，做着这些大量的，重复性的，无聊的，痛苦的，与人沟通的工作，痛苦吗？
 
-<p>确实，一个人来到陌生的城市，没有了朋友，远离了家人，来之前想想自己，学校一般，学的专业更是艰难，在学校里除了读了几本书以外，还有什么本事？我不知道你哪里来的自信，就这么兴致勃勃的来了。嗯，你在上海的表哥确实厉害，可跟你有啥关系，你好意思一直依赖人家吗？</p>
+终于，知道努力了，开始认真的了解各行各业，嗯，决定了，进入互联网行业，可最后呢，谁会要你一个啥都不懂，啥都不会的产品经理呢？不试试怎么知道呢，好，那就去尝试，开始疯狂地投简历，没有面试的时候就在家里看产品经理的资料，可最后呢，全上海的产品经理职位都投遍了，还是一无所有，什么都没有。绝望吗？难道就只好这么，灰溜溜的回老家吗？是不是，从来没有想过，自己是如此的一无是处？你那时，很想呐喊，却只能在心里无声的呐喊，想哭，却只能狠狠的憋着，对吗？
 
-<p>来了之后很满意吧，才面试了几次，以前的自信就再也荡然无存了吧？来之前也没想好，来了之后，还是没有想好自己准备做什么，然后呢，只能去做一些中介，电话销售，卖房子，卖保险的工作，开心吗？作为一个内向的人，做着这些大量的，重复性的，无聊的，痛苦的，与人沟通的工作，痛苦吗？</p>
+于是，把自己卑微在了泥土里，多年来的自我感觉良好，崩了，也没自信了。小伙以前不是挺狂的吗？怎么现在变得这么唯唯诺诺的？就连那用惨痛记忆学会的，直视他人的眼睛，都忘记了，不对，是抛弃了吧？
 
-<p>终于，知道努力了，开始认真的了解各行各业，嗯，决定了，进入互联网行业，可最后呢，谁会要你一个啥都不懂，啥都不会的产品经理呢？不试试怎么知道呢，好，那就去尝试，开始疯狂地投简历，没有面试的时候就在家里看产品经理的资料，可最后呢，全上海的产品经理职位都投遍了，还是一无所有，什么都没有。绝望吗？难道就只好这么，灰溜溜的回老家吗？是不是，从来没有想过，自己是如此的一无是处？你那时，很想呐喊，却只能在心里无声的呐喊，想哭，却只能狠狠的憋着，对吗？</p>
+不为小事低头，就为大事低头。以前校招的时候，连去都不去，不了解一下社会的行情，不会制作简历，就想着来到上海再说。好吧，来上海了，你找谁说去？以前过的太安逸，现在开始偿还了吧？
 
-<p>于是，把自己卑微在了泥土里，多年来的自我感觉良好，崩了，也没自信了。小伙以前不是挺狂的吗？怎么现在变得这么唯唯诺诺的？就连那用惨痛记忆学会的，直视他人的眼睛，都忘记了，不对，是抛弃了吧？</p>
+不过，还好，我们还没有放弃，忍着憋屈，走向了程序员之路。
 
-<p>不为小事低头，就为大事低头。以前校招的时候，连去都不去，不了解一下社会的行情，不会制作简历，就想着来到上海再说。好吧，来上海了，你找谁说去？以前过的太安逸，现在开始偿还了吧？</p>
+日子也开始慢慢的变的好过了，但，永远不要忘了23岁生日的时候，自己那无声的呐喊——我绝不，再让自己这么落魄了！
 
-<p>不过，还好，我们还没有放弃，忍着憋屈，走向了程序员之路。</p>
+自信的缺失，导致后来加倍的补偿，于是变得越来越暴躁，骄傲。持续了好久，也就是在目前吧，才勉强恢复了你原有的态度，不卑不亢，以及原有的自信。
 
-<p>日子也开始慢慢的变的好过了，但，永远不要忘了23岁生日的时候，自己那无声的呐喊——我绝不，再让自己这么落魄了！</p>
+终于解决了温饱问题，你可能会感觉落寞了吧？24年前，父亲在和目前的我一样大的年纪时，日子过的还是紧巴巴的，不过，这个年龄的时候，我们出生了。一家三口待在陌生的城市里，虽然生活在城市的底层里，每日以卖菜维生，但还是其乐融融。24年后，我们也同样的，处在陌生的城市里，拥有着全家最高的学历与聪明的头脑，却过的，怎么说，孤苦，灰头土脸。
 
-<p>自信的缺失，导致后来加倍的补偿，于是变得越来越暴躁，骄傲。持续了好久，也就是在目前吧，才勉强恢复了你原有的态度，不卑不亢，以及原有的自信。</p>
+不过，我们也不是一事无成呀，相比较去年的时候，你做梦都想拥有自己的住所。今年这个时候，终于能够住进自己的小屋了。尽管房租很贵，而且还是偏远郊区，住这个压力还挺大。可毕竟作为一个内向型人，独处才是王道。
 
-<p>终于解决了温饱问题，你可能会感觉落寞了吧？24年前，父亲在和目前的我一样大的年纪时，日子过的还是紧巴巴的，不过，这个年龄的时候，我们出生了。一家三口待在陌生的城市里，虽然生活在城市的底层里，每日以卖菜维生，但还是其乐融融。24年后，我们也同样的，处在陌生的城市里，拥有着全家最高的学历与聪明的头脑，却过的，怎么说，孤苦，灰头土脸。</p>
+如果高兴了，倒也没啥，可是一旦陷入了悲观情绪，这种情绪再被空旷的家无限放大，该怎么办？
 
-<p>不过，我们也不是一事无成呀，相比较去年的时候，你做梦都想拥有自己的住所。今年这个时候，终于能够住进自己的小屋了。尽管房租很贵，而且还是偏远郊区，住这个压力还挺大。可毕竟作为一个内向型人，独处才是王道。</p>
+关于孤独，我记得我们是从来不怕这个的，对吗？记得大四没什么课的时候，白天早早的起床，呆在图书馆里，尽情地阅读，尽管好多看过的东西都忘记了，可还是很充实，不是吗？这一天虽然就说了三句话，早上的时候，阿姨，我要白菜，馒头。中午了，我要这个。。。是的，也就跟食堂大妈说了三句话。然后呢，图书馆关门了，背起书包，偷偷穿过栅栏，来到新大的操场上，雪夜里，一个人尽情的奔跑，陪伴的，只有天山的星星，然后耳边在响着《夜空中最亮的星》，也没有感到落寞，不是吗？反而内心还感觉无比充实！偶尔会来几个维族朋友，可把我们高兴坏了，可我们的速度太快，总是要超过他们，于是，就想着慢一点，跟在他的后面，一步一步的。跑完之后呢，再去小卖部买个茶叶蛋，回到宿舍了，正好，可以睡觉了！这种日子，我们都过的很快乐，现在的生活要丰富的多，怎么会感到孤独呢？
 
-<p>如果高兴了，倒也没啥，可是一旦陷入了悲观情绪，这种情绪再被空旷的家无限放大，该怎么办？</p>
+可目前不一样！好吧，因为我们的心里，装了一个特殊的人。这样也挺好的呀，虽然降低了我们对孤独的抵抗力，却也增加了生活的乐趣了。喜欢她的人那么多，虽然我没人喜欢，可我也不想做备胎呀。不管怎么说，这比一个人浑浑噩噩的，没有目标与追求好多了。
 
-<p>关于孤独，我记得我们是从来不怕这个的，对吗？记得大四没什么课的时候，白天早早的起床，呆在图书馆里，尽情地阅读，尽管好多看过的东西都忘记了，可还是很充实，不是吗？这一天虽然就说了三句话，早上的时候，阿姨，我要白菜，馒头。中午了，我要这个。。。是的，也就跟食堂大妈说了三句话。然后呢，图书馆关门了，背起书包，偷偷穿过栅栏，来到新大的操场上，雪夜里，一个人尽情的奔跑，陪伴的，只有天山的星星，然后耳边在响着《夜空中最亮的星》，也没有感到落寞，不是吗？反而内心还感觉无比充实！偶尔会来几个维族朋友，可把我们高兴坏了，可我们的速度太快，总是要超过他们，于是，就想着慢一点，跟在他的后面，一步一步的。跑完之后呢，再去小卖部买个茶叶蛋，回到宿舍了，正好，可以睡觉了！这种日子，我们都过的很快乐，现在的生活要丰富的多，怎么会感到孤独呢？</p>
+也许真的有那么一天，你彻底地失去了动力，迷失了，甚至找不到活着的意义。...
 
-<p>可目前不一样！好吧，因为我们的心里，装了一个特殊的人。这样也挺好的呀，虽然降低了我们对孤独的抵抗力，却也增加了生活的乐趣了。喜欢她的人那么多，虽然我没人喜欢，可我也不想做备胎呀。不管怎么说，这比一个人浑浑噩噩的，没有目标与追求好多了。</p>
+有点矫情，还有些自恋。回想起父亲，不也是高中毕业闯荡了好多年才有了家，才有所成就了。我这才一年，路还很长。五年计划，还剩下一年了，加油吧。
 
-<p>也许真的有那么一天，你彻底地失去了动力，迷失了，甚至找不到活着的意义。...</p>
+真希望自己能够随时自信地说出，是时候表演真正的技术了！
 
-<p>有点矫情，还有些自恋。回想起父亲，不也是高中毕业闯荡了好多年才有了家，才有所成就了。我这才一年，路还很长。五年计划，还剩下一年了，加油吧。</p>
+对了，大学毕业宴上，我说要做一个有趣的人，现在的我，应该勉强做到了吧？很高兴认识你。
 
-<p>真希望自己能够随时自信地说出，是时候表演真正的技术了！</p>
+</code></pre>
 
-<p>对了，大学毕业宴上，我说要做一个有趣的人，现在的我，应该勉强做到了吧？很高兴认识你。</p>
-
-<p><strong>感谢阅读，愿与君共勉！</strong></p>
-</article></body></html>
+<p><strong>感谢阅读，愿与君共勉！</strong></p></article></body></html>
