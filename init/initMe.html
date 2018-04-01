@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嗨，我的GF</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js">
+    </script>
+    <!--<script src="../js/jquery-1.11.2.js"></script>-->
+
+
+    <script src="../js/common.js"></script>
+    <style>
+        .page__hd {
+            padding: 40px;
+        }
+
+        .page__desc {
+            margin-top: 5px;
+            color: #888;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .page__title {
+            text-align: left;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .page__hd {
+            background-color: #f7f7f7;
+        }
+
+        .weui-article {
+            padding: 20px 15px 0px 15px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <!-- 头 -->
+    <div class="page__hd">
+        <h1 class="page__title">INIT.ME</h1>
+        <p class="page__desc">你好，我的<span id="span_nickname">...</span></p>
+    </div>
+
+    <div id="homePage">
+        <article class="weui-article">
+            <!--<h1>编号： 1</h1>-->
+            <section>
+                <h2 class="title">Hello...</h2>
+                <section>
+
+                    <p>
+                        当你能看到这个，看来我有女朋友了，哈哈。首先，谢谢你能选中我，2018年3月25日 11:35:08的我表示很欣慰。
+                    </p>
+                    <p>
+                        以前的时候，记得应该是在大三的时候，就想做一个这个好玩的，选择题。可能是想着将自己初始化一下，以适应
+                        新的身份。
+                    </p>
+                    <p>
+                        目前的我，处于一个苦涩的时期。后知后觉的我，可能需要提前告知我一些关于你的想法。
+                    </p>
+                    <p>
+                        随心一点。 ^_^
+                    </p>
+
+                </section>
+
+            </section>
+        </article>
+
+        <!--<div class="weui-cells weui-cells_form">-->
+        <div class="weui-cells__title">我还无法未卜先知你的外号...</div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" id="you_nickname" placeholder="点我输入"/>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <a href="javascript:;" class="weui-btn weui-btn_primary" onclick="initStart();">确认就叫这个，开始</a>
+        <!--</div>-->
+
+    </div>
+
+    <!--<div class="weui-cells__title">单选列表项</div>-->
+    <!--<div class="weui-cells weui-cells_radio">-->
+    <!--<label class="weui-cell weui-check__label" for="x11">-->
+    <!--<div class="weui-cell__bd">-->
+    <!--<p>cell standard</p>-->
+    <!--</div>-->
+    <!--<div class="weui-cell__ft">-->
+    <!--<input type="radio" class="weui-check" name="radio1" id="x11"/>-->
+    <!--<span class="weui-icon-checked"></span>-->
+    <!--</div>-->
+    <!--</label>-->
+    <!---->
+    <!--</div>-->
+
+    <!--<div class="weui-cells__title">复选列表项</div>-->
+    <!--<div class="weui-cells weui-cells_checkbox">-->
+    <!--<label class="weui-cell weui-check__label" for="s11">-->
+    <!--<div class="weui-cell__hd">-->
+    <!--<input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked"/>-->
+    <!--<i class="weui-icon-checked"></i>-->
+    <!--</div>-->
+    <!--<div class="weui-cell__bd">-->
+    <!--<p>standard is dealt for u.</p>-->
+    <!--</div>-->
+    <!--</label>-->
+    <!--</div>-->
+
+</div>
+</body>
+<script>
+
+    // 设置题为全局变量
+    var questionObj;
+
+    // 开始
+    var initStart = function () {
+        var you_nickname = $('#you_nickname').val();
+        if (you_nickname == '') {
+            alert("所以，叫你啥呢？快填好。");
+            return;
+        }
+        // 设置头像
+        $('#span_nickname').html(you_nickname);
+
+        $.ajax({
+            url: API_URL + "bindYou?&name=" + you_nickname,
+            type: "get",
+            success: function (data) {
+                $('#homePage').empty();
+                // 增加两个 div 层
+                $('#homePage').append('<div id="questionDiv"></div><div id="submitDiv"></div><div id="beforeAnswerDiv"></div>');
+
+                // data 是一个元组
+                uuid = data['a'];
+                data = data['b'];
+                
+                questionObj = data;
+                console.log(data);
+                // 第一次返回第一题
+                initQuestionView(data);
+
+                // init 提交按钮
+                var str = '<br><div >\n' +
+                    '        <span style="width: 30%;float: left"><a href="javascript:;" onclick="chooseQuestionNum()" class="weui-btn weui-btn_default">选择题号</a></span>\n' +
+                    '        <span style="width: 70%;float: left"><a href="javascript:;" onclick="submitQuestion()" class="weui-btn weui-btn_primary">确认</a></span>\n' +
+                    '    </div>';
+                $('#submitDiv').append(str);
+            },
+            error: function (e) {
+                console.log(e);
+                alert("出错了");
+            }
+        })
+
+        // 初始化题的数目？
+        $.ajax({
+            url:API_URL+"queryQuesNum",
+            success:function (data) {
+                if (data.data != null){
+                    quesNum = data.data;
+                }
+            },error:function (e) {
+                console.log(e);
+                alert("刷新？");
+            }
+        });
+    }
+
+    // 选择题号，直接跳转
+    var chooseQuestionNum = function () {
+        var num = prompt("输入想要跳到的题目(总共 " + quesNum+" 道)", "");
+        // 进入跳转
+        if (num == null || num == '') {
+            return;
+        }
+        num = parseInt(num);
+        $.ajax({
+            url: API_URL + "findByIndex?uuid=" + uuid + "&index=" + num,
+            type: "get",
+            success: function (data) {
+                data = data.data;
+                if (data == null){
+                    alert("似乎没有这一题。");
+                    return;
+                }
+                questionObj = data;
+                initQuestionView(data);
+            },
+            error: function (e) {
+                console.log(e);
+                alert("出错了");
+            }
+        })
+    };
+
+    // 初始化题目
+    var initQuestionView = function (data) {
+        $('#questionDiv').empty();
+        $('#beforeAnswerDiv').empty();
+
+        // 处理换行问题
+        var text = data.text;
+        text = text.replace(/\n/g, '<br>');
+        data.text = text;
+        
+        var str = '<article class="weui-article" id="' + data.id + '">\n' +
+            '        <section>\n' +
+            '            <h2 class="title">No. <span id="index_num">' + data.index + '</span></h2>\n' +
+            '            <section>\n' +
+            '                <p>\n'
+            + data.text +
+            '                </p>\n' +
+            '                <p style="font-size: 14px;color: #aaaaaa;text-align: right">创建时间：\n'
+            + data.createTime +
+            '                </p>\n' +
+            '            </section>\n' +
+            '        </section>\n' +
+            '    </article>';
+        var type = data.type;
+        var optionItems = data.optionItems;
+
+        if (type == 1) {
+            // 单选
+            str += '<div class="weui-cells__title">单选题</div>';
+            str += '<div class="weui-cells weui-cells_radio">';
+            for (var i = 0; i < optionItems.length; i++) {
+                var item = optionItems[i];
+                str += '<label class="weui-cell weui-check__label" for="x' + i + '">\n' +
+                    '            <div class="weui-cell__bd">\n' +
+                    '                <p>'+ item.tag +'. ' + item.text + '</p>\n' +
+                    '            </div>\n' +
+                    '            <div class="weui-cell__ft">\n' +
+                    '                <input type="radio" class="weui-check" id="x' + i + '" name="singleSelect" value="' + item.tag + '"/>\n' +
+                    '                <span class="weui-icon-checked"></span>\n' +
+                    '            </div>\n' +
+                    '        </label>';
+            }
+            str += '</div>';
+        } else {
+            // 多选
+            str += '<div class="weui-cells__title">多选题</div>';
+            str += '<div class="weui-cells weui-cells_checkbox">';
+            for (var i = 0; i < optionItems.length; i++) {
+                var item = optionItems[i];
+                str += '<label class="weui-cell weui-check__label" for="s1' + i + '">\n' +
+                    '            <div class="weui-cell__hd">\n' +
+                    '                <input type="checkbox" class="weui-check" name="checkbox1" id="s1' + i + '" value="' + item.tag + '"/>\n' +
+                    '                <i class="weui-icon-checked"></i>\n' +
+                    '            </div>\n' +
+                    '            <div class="weui-cell__bd">\n' +
+                    '                <p>' + item.tag +'. '+ item.text + '</p>\n' +
+                    '            </div>\n' +
+                    '        </label>';
+            }
+            str += '</div>';
+        }
+
+        $('#questionDiv').append(str);
+
+        // 查询曾经的答案。。
+        queryBeforeAnswer(data.index);
+        
+    };
+    
+    var quesNum = 0;
+    
+
+    var submitQuestion = function () {
+        var type = questionObj.type;
+        var index = questionObj.index;
+        var id = questionObj.id;
+        var json = {};
+        json.type = type;
+        json.id = id;
+        json.index = index;
+        
+        var answer = ''; 
+        if (type == 1){
+            // 单选
+            $('input[type="radio"][name="singleSelect"]').each(function(){
+                if(this.checked){
+                    answer = $(this).val();
+                }
+            });
+        }else {
+            // 多选
+            $('input[type="checkbox"][name="checkbox1"]').each(function(){
+                if(this.checked){
+                    if (answer.length > 0){
+                        answer += " , " + $(this).val() ;
+                    }else {
+                        answer += $(this).val();
+                    }
+                }
+            });
+        }
+        if (answer == ''){
+            // ...未选择
+            alert("需要选择，要不直接选别的题。");
+        }
+        
+        json.answer = answer;
+
+        $.ajax({
+            url: API_URL + "answer?uuid="+uuid,
+            type: "post",
+            data: JSON.stringify(json),
+            contentType: "application/json; charset=utf-8",
+            dataType:'json',
+            success:function (data) {
+                data = data.data;
+                if (data == null){
+                    alert("题目全部做完了，就这些。");
+                    return;
+                }
+                // 这是下一题。。
+                questionObj = data;
+                initQuestionView(data);
+            },
+            error: function (e) {
+                alert(e);
+                console.log(e);
+            }
+            
+        });
+    }
+    
+    // 查询以前的答案。
+    var queryBeforeAnswer = function (index) {
+
+        $.ajax({
+            url: API_URL + "queryYouAnswer?uuid="+uuid+"&index="+index,
+            type: "get",
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+                data = data.data;
+                if (data == null || data.length == 0){
+                    return;
+                }
+                var str = '<p style="margin-top: 6px"></p><hr/><h4>以往选择</h4>';
+                for(var i = 0; i< data.length;i++){
+                    var item = data[i];
+                    str += '<p style="text-align: center"> <span>&nbsp;&nbsp;'+item[0]+'</span><span style="font-size: 14px;color: #aaaaaa;text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+item[1]+'</span></p>';
+                }
+                $('#beforeAnswerDiv').append(str);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+
+        });
+    }
+
+
+</script>
+</html>
